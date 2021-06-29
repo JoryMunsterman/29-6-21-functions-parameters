@@ -5,11 +5,12 @@
 // add(2, 5) geeft 7
 
 function add(a, b) {
-  return a + b;
+    return a + b;
 }
 
 const result = add(1, 4);
 console.log(result);
+
 
 /* Opdracht 1 */
 // Schrijf een functie genaamd greeter, die een naam verwacht en een groet teruggeeft
@@ -17,7 +18,12 @@ console.log(result);
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
 
+function greeter(name) {
+    return "Hoi" + name + "!"
+}
 
+console.log(greeter(" Jan"))
+console.log(greeter(" Kees"))
 
 /* Opdracht 2 */
 // Schrijf een functie genaamd minutesToSeconds, die een hoeveelheid minuten verwacht (als een getal) en teruggeeft hoeveel seconden dat zijn.
@@ -26,7 +32,16 @@ console.log(result);
 // minutesToSeconds(3) geeft 180
 // minutesToSeconds(23) geeft 1380
 
+function minutesToSeconds(minutes) {
+    let seconds = minutes * 60
 
+    return seconds
+
+}
+
+console.log(minutesToSeconds(1))
+console.log(minutesToSeconds(3))
+console.log(minutesToSeconds(23))
 
 /* Opdracht 3 */
 // Schrijf een functie genaamd merge, die twee strings verwacht en deze aan elkaar geplakt teruggeeft.
@@ -35,8 +50,15 @@ console.log(result);
 // merge("abra", "cadabra") geeft "abracadabra"
 // merge("zoet", "sappig") geeft "zoetsappig"
 
+function merge(a, b) {
+    const together = a + b
 
+    return [together]
 
+}
+
+console.log(merge("abra", "cadabra"))
+console.log(merge("zoet", "sappig"))
 
 /* Opdracht  4 */
 // Schrijf een functie genaamd calculateDogYears die de hondenleeftijd verwacht en dit omrekent naar mensenjaren (1 tot 7). Op basis daarvan wordt een zinnetje teruggegeven.
@@ -44,6 +66,14 @@ console.log(result);
 // calculateDogYears(6) geeft "Jouw hond is 42 jaar oud in mensenjaren."
 // calculateDogYears(2) geeft "Jouw hond is 14 jaar oud in mensenjaren."
 
+function calulateDogYears(age) {
+    let humanYears = 7 * age
+
+    console.log(`Jouw hond is ${humanYears} jaar oud in mensenjaren`)
+}
+
+calulateDogYears(6)
+calulateDogYears(2)
 
 
 /* Opdracht 5 */
@@ -54,12 +84,26 @@ console.log(result);
 // wrapper("beep", "_") geeft "_beep_"
 // wrapper("kaas", "Q") geeft "QkaasQ"
 
+function wrapper(karakter, woord, karakter2) {
+
+  console.log(karakter + woord + karakter2)
+}
+wrapper('"*', "bril", '*"')
+wrapper("_", "beep", "_")
+wrapper("Q", "kaas", "Q")          //geen wrapper("kaas", "Q") maar "Q" "kaas" "Q"
 
 
-/* Bonus opdracht  */
-// Schrijf een functie genaamd createDetailString, die een object met de properties firstName, lastName en profession verwacht en een zin teruggeeft
+// /* Bonus opdracht  */
+// Schrijf een functie genaamd createDetailString, die een object met de properties firstName,
+// lastName en profession verwacht en een zin teruggeeft
 // ---- Verwachte uitkomsten:
-// createDetailString({ firstName: 'Jan', lastName: 'Jansen', profession: 'docent'}) geeft "Het beroep vam Jan Jansen is docent."
-// createDetailString({ firstName: 'Kees', lastName: 'Klaasen', profession: 'brandweerman'}) geeft "Het beroep vam Kees Klaasen is brandweerman."
+// createDetailString({ firstName: 'Jan', lastName: 'Jansen', profession: 'docent'}) geeft
+// "Het beroep vam Jan Jansen is docent."
+// createDetailString({ firstName: 'Kees', lastName: 'Klaasen', profession: 'brandweerman'})
+// geeft "Het beroep vam Kees Klaasen is brandweerman."
 
-
+function createDetailString(firstName, lastName, profession) {
+    console.log(`Het beroep van ${firstName} ${lastName} is ${profession}`)
+}
+createDetailString('Jan', 'Jansen', 'docent')
+createDetailString('Kees', 'Klaasen','brandweerman')
